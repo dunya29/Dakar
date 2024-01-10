@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "Услуги"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+            "page": "Услуги"
+            })
+            <!--services-->
+            <section class="section services">
+                <div class="container">
+                    <div class="mb-60 services__content">
+                        <h1>Услуги</h1>
+                        <p>А ещё ключевые особенности структуры проекта смешаны с не уникальными данными до степени
+                            совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. В целом, конечно,
+                            новая модель организационной деятельности не даёт нам иного выбора, кроме определения
+                            анализа существующих паттернов поведения. Следует отметить, что социально-экономическое
+                            развитие является качественно новой ступенью укрепления моральных ценностей.</p>
+                    </div>
+                    <div class="services__items">
+                        <!--item-service-->
+                        <a href="#" class="item-service">
+                            <img src="img/services-1.png" alt="Нанесение логотипа">
+                            <div class="item-service__content">
+                                <h3>Нанесение<br>логотипа</h3>
+                            </div>
+                        </a>
+                        @@include('_item-service.html', {"nmb": 2, "txt": "Изготовление бейджей"})
+                        @@include('_item-service.html', {"nmb": 3, "txt": "Изготовление офисных табличек"})
+                        @@include('_item-service.html', {"nmb": 4, "txt": "Изготовление номерков"})
+                        @@include('_item-service.html', {"nmb": 3, "txt": "Разработка сувениров и подарков"})
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+.item-review {
+    padding: 60px;
+    border-radius: 32px;
+    background: rgba(0, 23, 85, 0.05);
+    h4 {
+        margin-bottom: 8px;
+    }
+    .main-link {
+        white-space: normal;
+        text-align: left;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        img {
+            flex: 0 0 90px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: contain;
+            margin-right: 16px;
+        }
+        span {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+    &__body {
+        margin-bottom: 24px;
+    }
+    @media (max-width: $bp1) {
+        &__top span {
+            font-size: 21px;
+        }
+    }
+    @media (max-width: $bp2) {
+        padding: 38px;
+        &__top, &__body {
+            margin-bottom: 16px;
+        }
+        &__top {
+            img {
+                flex: 0 0 70px;
+                width: 70px;
+                height: 70px
+            };
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: $bp3) {
+        padding: 24px;
+        border-radius: 24px;
+    }
+    @media (max-width: $bp6) {
+        padding: 16px;
+        border-radius: 16px;
+        &__top {
+            margin-bottom: 12px;
+        }
+    }
+}
+.reviews {
+    overflow: hidden;
+    .swiper {
+        overflow: visible;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    @media (max-width: $bp2) {
+        h2 span{
+            display: block;
+        }
+        &__items {
+            gap: 16px;
+        }
+    }
+    @media (max-width: $bp4) {
+        &__items {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (max-width: $bp6) {
+        &__items {
+            gap: 12px;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {   
+    "title": "Каталог"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "Каталог"
+            })
+            <!--event catalog-->
+            <section class="section catalog">
+                <div class="container">
+                    <h1>Каталог</h1>
+                    <div class="mb-60 tabs">
+                        <label>
+                            <input type="checkbox" checked>
+                            <span>Всё</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Женщине</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Коллеге</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Полезные</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Одежда</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Женщине</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Коллеге</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Полезные</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Одежда</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Женщине</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Коллеге</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Полезные</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Одежда</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Женщине</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Коллеге</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Полезные</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Одежда</span>
+                        </label>
+                    </div>
+                    <div class="page-sort">
+                        <a href="#" class="active">По популярности</a>
+                        <a href="#">По возрастанию цены</a>
+                        <a href="#">По убыванию цены</a>
+                    </div>
+                    <div class="catalog__items">
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                    </div>
+                    @@include('_pagination.html')
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

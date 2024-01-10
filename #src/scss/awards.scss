@@ -1,0 +1,24 @@
+.awards {
+    overflow: hidden;
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        .tabs {
+            flex: 0 0 75%;
+            margin-right: 24px;
+        }
+    }
+    &__block .swiper {
+        overflow: visible;
+    }
+    @media (max-width: $bp3) {
+        &__top {
+            display: block;
+            .tabs {
+              margin: 0 0 14px;
+            }
+        }
+    }
+}

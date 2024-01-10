@@ -1,0 +1,26 @@
+.notfound {
+    padding-top: 133px;
+	&__content {
+        max-width: 528px;
+        margin: 0 auto 7px;
+        text-align: center;
+        h1 {
+            margin-bottom: 24px;
+        }
+        .main-btn {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+	&__img {
+        max-width: 1270px;
+        margin: 0 auto;
+    }
+    @media (max-width: $bp2) {
+        padding-top: 80px;
+      }
+      @media (max-width: $bp4) {
+        padding-top: 50px;
+      }
+}

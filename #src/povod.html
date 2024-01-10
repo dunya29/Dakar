@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "День железнодорожника"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            @@include('_breadcrumbs-2.html', {
+            "page1": "Повод",
+            "page2": "День железнодорожника"
+            })
+            <!--event catalog-->
+            <section class="section catalog">
+                <div class="container">
+                    <div class="mb-60 catalog__content">
+                        <h1>День железнодорожника</h1>
+                        <p>А ещё ключевые особенности структуры проекта смешаны с не уникальными данными до степени
+                            совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. В целом, конечно,
+                            новая модель организационной деятельности не даёт нам иного выбора, кроме определения
+                            анализа существующих паттернов поведения.</p>
+                    </div>
+                    <div class="page-sort">
+                        <a href="#" class="active">По популярности</a>
+                        <a href="#">По возрастанию цены</a>
+                        <a href="#">По убыванию цены</a>
+                    </div>
+                    <div class="catalog__items">
+                        <!--card-->
+                        <a href="#" class="card">
+                            <div class="media-contain">
+                                <img src="img/product.jpg" alt="Портфель с одним отделением">
+                            </div>
+                            <div class="card__labels">
+                                <span>Новинка</span>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__price">
+                                    <span class="h4 rub">от 1450</span>
+                                </div>
+                                <h5>Портфель с одним отделением</h5>
+                            </div>
+                        </a>
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                    </div>
+                    @@include('_pagination.html')
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

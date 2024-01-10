@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "Отзывы"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+            "page": "Отзывы"
+            })
+            <!--reviews-->
+            <section class="section reviews">
+                <div class="container">
+                    <h1 class="mb-60">Отзывы</h1>
+                    <div class="page-sort">
+                        <a href="#" class="active">Сначала новые</a>
+                        <a href="#">Сначала старые</a>
+                    </div>
+                    <div class="reviews__items">
+                        @@include("_item-review.html", {"nmb": "1"})
+                        @@include("_item-review.html", {"nmb": "2"})
+                        @@include("_item-review.html", {"nmb": "3"})
+                        @@include("_item-review.html", {"nmb": "4"})
+                        @@include("_item-review.html", {"nmb": "5"})
+                        @@include("_item-review.html", {"nmb": "6"})
+                        @@include("_item-review.html", {"nmb": "7"})
+                        @@include("_item-review.html", {"nmb": "8"})
+                    </div>
+                    @@include('_pagination.html')
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

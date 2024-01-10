@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "Наши работы"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+            "page": "Наши работы"
+            })
+            <!--works-->
+            <section class="section works">
+                <div class="container">
+                    <h1 class="mb-60">Наши работы</h1>
+                    <div class="works__items">
+                        @@include("_item-work.html",{"nmb": "1"})
+                        @@include("_item-work.html",{"nmb": "2"})
+                        @@include("_item-work.html",{"nmb": "3"})
+                        @@include("_item-work.html",{"nmb": "4"})
+                        @@include("_item-work.html",{"nmb": "5"})
+                        @@include("_item-work.html",{"nmb": "6"})
+                        @@include("_item-work.html",{"nmb": "7"})
+                        @@include("_item-work.html",{"nmb": "8"})
+                        @@include("_item-work.html",{"nmb": "9"})
+                        @@include("_item-work.html",{"nmb": "10"})
+                        @@include("_item-work.html",{"nmb": "11"})
+                        @@include("_item-work.html",{"nmb": "12"})
+                    </div>
+                    @@include('_pagination.html')
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

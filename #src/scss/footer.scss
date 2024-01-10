@@ -1,0 +1,250 @@
+.footer {
+    padding: 60px 0 36px;
+    background: $dark-blue;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 48px 30px;
+        align-items: start;
+    }
+    &__logo {
+        grid-column: 1/6;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 12px;
+        img {
+            flex: 0 0 275px;
+            width: 275px;
+            margin-right: 30px;
+        }
+        span {
+            font-size: 32px;
+            color:$white;
+            line-height: 107.9%;
+        }
+    }
+    &__menu {
+        grid-area: 1/7/3/13;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        &--col {
+            &:nth-child(2n) {
+                justify-self: center;
+            }
+            &:last-child {
+                justify-self: end;
+            }
+            span {
+                display: block;
+                font-size: 24px;
+                color: rgba($white, 0.6);
+                margin-bottom: 24px;
+            }
+            li {
+                margin-bottom: 14px;
+            }
+            a {
+                color: $white;
+                line-height: 1.35;
+                &:after {
+                    background: $white;
+                }
+            }
+        }
+    }
+    &__contacts {
+        grid-column: 1/6;
+    }
+    &__contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0
+        };
+        svg {
+            fill: $white;
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+        }
+        a, span {
+            font-size: 24px;
+            color: $white;
+        }
+    }
+    &__footer {
+        grid-column: 1/13;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .social {
+            flex: 0 0 25%;
+            margin-right: 30px;
+            margin-bottom: 24px;
+        }
+    }
+    &__content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: -16px 0 8px;
+        p {
+            font-size: 18px;
+            color: $white;
+            @media (max-width: $bp1) {
+                font-size: 16px;
+              }
+        }
+        a, span {
+            font-size: 16px;
+            color: rgba($white, 0.6);
+        }
+        p, a {
+            flex: 1 1 auto;
+            margin: 16px 24px 16px 0;
+        }
+    }
+    &__dev {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        white-space: nowrap;
+        span {
+            margin: 0 24px 0 0;
+        }
+        a {
+            display: block;
+            flex: 0 0 98px;
+            width: 98px;
+            margin: 0!important;
+        }
+        svg {
+            width: 98px;
+            height: 27px;
+        }
+    }
+    @media (max-width: $bp1) {
+        .container {
+            gap: 40px 24px;
+        }
+        &__logo {
+            flex-direction: column;
+            align-items: flex-start;
+            img {
+                flex: 0 0 auto;
+                width: 250px;
+                margin: 0 0 24px;
+            }
+            span {
+                font-size: 26px;
+            }
+        }
+        &__contact {
+            a, span {
+                font-size: 21px;
+            }
+        }
+        &__menu {
+            grid-area: 1/6/3/13;
+            span {
+                font-size: 21px;
+            }
+        }
+    }
+    @media (max-width: $bp2) {
+        &__dev {
+            span {
+                margin-right: 16px;
+            }
+        }
+    }
+    @media (max-width: $bp3) {
+        padding: 48px 0 24px;
+        &__logo {
+            grid-column: 1/13;
+            margin-bottom: 0;
+            img {
+                margin-bottom: 12px;
+            }
+            span {
+                font-size: 20px;
+            }
+        }
+        &__menu {
+            grid-area: 2/1/3/13;
+            max-width: 600px;
+        }
+        &__contact {
+            a, span {
+                font-size: 18px;
+            }
+        }
+        &__menu {
+            span {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+        }
+        &__contacts {
+            grid-column: 1/13;
+        }
+        &__dev {
+            flex: 1 1 100%;
+            justify-content: flex-start;
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 38px 0 24px;
+        &__menu {
+            max-width: 500px;
+            grid-template-columns: 1fr 1fr;
+            &--col:last-child {
+                justify-self: start;
+            }
+        }
+        &__footer, &__content {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__content {
+            margin: 0;
+            a, p {
+                margin: 0 0 16px;
+            }
+        }
+    }
+    @media (max-width: $bp6) {
+        .container {
+            gap: 32px 0;
+        }
+        &__logo {
+            img {
+                width: 200px;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+        &__menu {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            &--col:nth-child(2n) {
+                justify-self: start;
+            }
+        }
+        &__contacts {
+            margin-bottom: 12px;
+        }
+        &__contact {
+            margin-bottom: 12px;
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}

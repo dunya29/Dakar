@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {   
+    "title": "Контакты"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "Контакты"
+            })
+            <!--contacts-->
+            <section class="section contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <div class="contacts__content">
+                            <h1 class="mb-60">Контакты</h1>
+                            <div class="mb-48 item-contact">
+                                <span>Адрес</span>
+                                <span>603006, Н. Новгород ул. Варварская 32д</span>
+                            </div>
+                            <div class="mb-48 item-contact">
+                                <span>Режим работы</span>
+                                <span>8-19<br>Воскресенье, суббота - выходной</span>
+                            </div>
+                            <div class="contacts__grid">
+                                <div class="mb-48 item-contact">
+                                    <span>Телефон</span>
+                                    <a href="tel:89108764044">8 910 876 40 44</a>
+                                </div>
+                                <div class="mb-48 item-contact">
+                                    <span>Почта</span>
+                                    <a href="mailto:dakar@r52.ru">dakar@r52.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map" id="map"></div>
+                    </div>
+                </div>
+            </section>
+            @@include('_main-form.html')
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+    @@include('_map.html')
+</body>
+
+</html>

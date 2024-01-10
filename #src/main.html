@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "Главная"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            <!--intro-->
+            <section class="section intro">
+                <div class="container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            @@include('_intro-slide.html')
+                            @@include('_intro-slide.html')
+                            @@include('_intro-slide.html')
+                            @@include('_intro-slide.html')
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="intro__btns">
+                        <button class="swiper-btn prev"><svg><use xlink:href="img/icons/sprite.svg#btn-prev"></use></svg></button>
+                        <button class="swiper-btn next"><svg><use xlink:href="img/icons/sprite.svg#btn-next"></use></svg></button>
+                    </div>
+                </div>
+            </section>
+            <!--main-about-->
+            <section class="section main-about">
+                <div class="container">
+                    <div class="main-about__content">
+                        <img src="img/main-about.png" alt="Корпоративные сувениры">
+                        <h3>Производим корпоративные сувениры с индивидуальным дизайном</h3>
+                        <p>А ещё ключевые особенности структуры проекта смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. В целом, конечно, новая модель организационной деятельности не даёт нам иного выбора, кроме определения анализа существующих паттернов поведения.</p>
+                        <a href="#" class="btn main-link">Подробнее о нас<svg><use xlink:href="img/icons/sprite.svg#btn-next"></use></svg></a>
+                    </div>
+                    <div class="main-about__items">
+                        @@include('_item-about.html', {"img": "star", "txt": "Работаем с 2012 года"})
+                        @@include('_item-about.html', {"img": "garanty", "txt": "Гарантия сроков"})
+                        @@include('_item-about.html', {"img": "eye", "txt": "Индивидуальный подход"})
+                        @@include('_item-about.html', {"img": "assortiment", "txt": "Разнообразный ассортимент"})
+                    </div>
+                </div>
+            </section>
+            <!--main-catalog-->
+            <section class="section catalog">
+                <div class="container">
+                    <h2 class="mb-60">Каталог</h2>
+                    <div class="catalog__items">
+                        <!--card-->
+                        <a href="#" class="card">
+                            <div class="media-contain">
+                                <img src="img/product.jpg" alt="Портфель с одним отделением">
+                            </div>
+                            <div class="card__labels">
+                                <span>-20%</span>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__price">
+                                    <del class="h5 rub">1950</del>
+                                    <span class="h4 rub">1450</span>
+                                </div>
+                                <h5>Портфель с одним отделением</h5>
+                            </div>
+                        </a>
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                        @@include("_card.html")
+                    </div>
+                    <div class="text-align">
+                        <a href="#" class="btn main-btn">Посмотреть еще</a>
+                    </div>
+                </div>
+            </section>
+            <!--awards-->
+            <section class="section awards switch-block">
+                <div class="container">
+                    <h2 class="mb-60">Наградная продукция</h2>
+                    <div class="awards__top">
+                        <!--tabs-->
+                        <div class="tabs">
+                            <span data-nav="" class="active">Дипломы</span>
+                            <span data-nav="">Плакетки</span>
+                            <span data-nav="">Тарелки</span>
+                            <span data-nav="">Кубки</span>
+                            <span data-nav="">Статуэтки</span>
+                        </div>
+                        <a href="#" class="btn main-link">Смотреть всё
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#btn-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <!--blocks-->
+                    <div class="awards__blocks">
+                        <!--block-->
+                        <div data-block="" class="awards__block active">
+                            <div class="swiper swiper-grid-4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                </div>
+                            </div>
+                            @@include("_swiper-btns.html", {})
+                        </div>
+                        @@include('_awards__block.html')
+                        @@include('_awards__block.html')
+                        @@include('_awards__block.html')
+                        @@include('_awards__block.html')
+                    </div>
+                </div>
+            </section>
+            <!--events-->
+            <section class="section events">
+                <div class="container">
+                    <div class="mb-60 page-top">
+                        <h2>Повод</h2>
+                        <a href="#" class="btn main-link">Смотреть всё
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#btn-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="events__items">
+                        @@loop("_item-event.html", [
+                        {"icon": "8march", "txt": "8 марта"},
+                        {"icon": "new-year", "txt": "Новый год"},
+                        {"icon": "23feb", "txt": "На 23 февраля"},
+                        {"icon": "8march", "txt": "День металлурга"},
+                        {"icon": "railway", "txt": "День железнодорожника"},
+                        {"icon": "avia", "txt": "День авиации"},
+                        {"icon": "miner", "txt": "День шахтера"},
+                        {"icon": "geology", "txt": "День Геолога"},
+                        {"icon": "trade", "txt": "День работников торговли"},
+                        {"icon": "medicine", "txt": "День медика"},
+                        {"icon": "chemistry", "txt": "День химика"},
+                        ])
+                    </div>
+                </div>
+            </section>
+            <!--awards-->
+            <section class="section awards switch-block">
+                <div class="container">
+                    <h2 class="mb-60">Бизнес сувениры</h2>
+                    <div class="awards__top">
+                        <!--tabs-->
+                        <div class="tabs">
+                            <span data-nav="" class="active">Подарки сотрудникам</span>
+                            <span data-nav="">Для руководителей</span>
+                            <span data-nav="">Для спикеров</span>
+                            <span data-nav="">Для партнеров</span>
+                            <span data-nav="">Для гостей</span>
+                        </div>
+                        <a href="#" class="btn main-link">Смотреть всё
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#btn-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="awards__blocks">
+                        <!--block-->
+                        <div data-block="" class="awards__block active">
+                            <div class="swiper swiper-grid-4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include("_award.html", {})
+                                    </div>
+                                </div>
+                            </div>
+                            @@include("_swiper-btns.html", {})
+                        </div>
+                        @@include('_awards__block.html')
+                        @@include('_awards__block.html')
+                        @@include('_awards__block.html')
+                        @@include('_awards__block.html')
+                    </div>
+                </div>
+            </section>
+            <!--feedback-->
+            <section class="section main-feedback">
+                <div class="container">
+                    <div class="main-feedback__inner">
+                        <div class="main-feedback__content">
+                            <h2>Полное оформление офиса со скидкой 15%</h2>
+                            <p>Таблички, папки, бейджи и много другое</p>
+                            <a href="#" class="btn main-btn modal-show" data-modal="feedback-modal">Оставить заявку</a>
+                        </div>
+                        <img src="img/main-feedback-img.png" alt="Полное оформление офиса со скидкой 15%">
+                    </div>
+                </div>
+            </section>
+            <!--reviews-->
+            <section class="section reviews">
+                <div class="container">
+                    <div class="mb-60 page-top">
+                        <h2>Лучше всего о нас расскажут <span>наши клиенты</span></h2>
+                        <a href="#" class="btn main-link">Смотреть всё
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#btn-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="swiper swiper-grid-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                @@include('_item-review.html',{"nmb": "1"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('_item-review.html',{"nmb": "2"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('_item-review.html',{"nmb": "3"})
+                            </div>
+                        </div>
+                    </div>
+                    @@include('_swiper-btns.html')
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

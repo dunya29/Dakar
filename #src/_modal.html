@@ -1,0 +1,70 @@
+<!--overlay-->
+<div class="overlay"></div>
+<!--feedback-modal-->
+<div class="modal" id="feedback-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="btn modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <div class="h2">Оставьте заявку</div>
+            <div class="h4">и мы с вами свяжемся</div>
+            <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                <div class="form__grid">
+                    <div class="item-form error">
+                        <input type="text" placeholder="Имя" name="name">
+                        <span data-error="" class="item-form__error">Заполните имя</span>
+                    </div>
+                    <div class="item-form">
+                        <input type="tel" placeholder="Телефон" name="tel">
+                        <span data-error="" class="item-form__error"></span>
+                    </div>
+                </div>
+                <div class="item-form">
+                    <input type="text" placeholder="Почта" name="email">
+                    <span data-error="" class="item-form__error"></span>
+                </div>
+                <div class="item-form">
+                    <textarea placeholder="Ваш комментарий" name="message" maxlength="3000" oninput="this.style.height = this.scrollHeight + 'px'"></textarea>
+                </div>
+                <div class="item-form file-form">
+                    <label>
+                        <span>Прикрепить файл</span>
+                        <input type="file" name="file" accept=".png,.jpg,.jpeg,.doc,.docx,.pdf,.xls,.xlsx">
+                        <span>Нажмите или перетащите сюда файл</span>
+                    </label>
+                    <span data-error="" class="item-form__error"></span>
+                    <div class="file-form__items"></div>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn main-btn">Оставить заявку</button>
+                    <p class="form__txt">Нажимая на кнопку «Оставить заявку», вы соглашаетесь <a href="#" target="_blank">с условиями политики конфиденциальности</a> и <a href="#" target="_blank">публичной офертой</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--success-modal-->
+<div class="modal success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="btn modal__close" aria-label="Закрыть всплывающее окно">
+                <svg><use xlink:href="img/icons/sprite.svg#icon-close"></use></svg>
+            </button>
+            <img src="img/success-bg.png" alt="Заявка отправлена">
+            <div class="h2">Спасибо!<br>Заявка отправлена</div>
+            <div class="h4">Мы скоро с вами свяжемся</div>
+        </div>
+    </div>
+</div>
+<!--error-modal-->
+<div class="modal error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="btn modal__close" aria-label="Закрыть всплывающее окно">
+                <svg><use xlink:href="img/icons/sprite.svg#icon-close"></use></svg>
+            </button>
+            <img src="img/error-bg.png" alt="Заявка не отправилась">
+            <div class="h2">Упс!<br>Заявка не отправилась</div>
+            <div class="h4">Попробуйте снова</div>
+        </div>
+    </div>
+</div>

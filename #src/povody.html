@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {   
+    "title": "Повод"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "Повод"
+            })
+            <!--events-->
+            <section class="section events">
+                <div class="container">
+                    <h1 class="mb-60">Повод</h1>
+                    <div class="events__items">
+                        @@loop("_item-event.html", [
+                        {"icon": "8march", "txt": "8 марта"},
+                        {"icon": "new-year", "txt": "Новый год"},
+                        {"icon": "23feb", "txt": "На 23 февраля"},
+                        {"icon": "8march", "txt": "День металлурга"},
+                        {"icon": "railway", "txt": "День железнодорожника"},
+                        {"icon": "avia", "txt": "День авиации"},
+                        {"icon": "miner", "txt": "День шахтера"},
+                        {"icon": "geology", "txt": "День Геолога"},
+                        {"icon": "trade", "txt": "День работников торговли"},
+                        {"icon": "medicine", "txt": "День медика"},
+                        {"icon": "chemistry", "txt": "День химика"},
+                        {"icon": "8march", "txt": "8 марта"},
+                        ])
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

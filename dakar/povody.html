@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link type="image/png" sizes="32x32" rel="icon" href="img/favicon/favicon-32x32.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="img/favicon/android-chrome-192x192.png">
+    <link sizes="120x120" rel="apple-touch-icon" href="img/favicon/apple-icon-120x120.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <link rel="preload" href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin> 
+    <title>Повод</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+    <div class="desktop-header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">
+                <img src="img/logo.svg" alt="Логотип «Дакар»">
+                <div class="h6">Работаем <span>по всей России</span></div>
+            </a>
+            <div class="header__top">
+                <div class="header__menu">
+                    <ul>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Наши работы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__info">
+                    <a href="tel:880080008080" class="header__phone">8 800 8000 80 80</a>
+                    <button class="btn stroke-btn modal-show" data-modal="feedback-modal">Оставить заявку</button>
+                </div>
+            </div>
+            <!--menu-->
+<nav class="menu">
+    <ul class="menu__list">
+        <li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Наградная продукция</a></li>
+        <li class="menu__item">
+            <a href="" class="menu__link">Повод</a>
+            <div class="menu__subnavs fixed-block">
+                <ul class="container custom-scroll">
+                    <li><a href="#">8 марта</a></li>
+                    <li><a href="#">Новый год</a></li>
+                    <li><a href="#">На 23 февраля</a></li>
+                    <li><a href="#">День металлурга</a></li>
+                    <li><a href="#">День железнодорожника</a></li>
+                    <li><a href="#">День авиации</a></li>
+                    <li><a href="#">День шахтера</a></li>
+                    <li><a href="#">День геолога</a></li>
+                    <li><a href="#">День работников торговли</a></li>
+                    <li><a href="#">День гибдд</a></li>
+                    <li><a href="#">День таможенника</a></li>
+                    <li><a href="#">День медика</a></li>
+                    <li><a href="#">День страхового агента</a></li>
+                    <li><a href="#">День химика</a></li>
+                    <li><a href="#">День подбеды</a></li>
+                    <li><a href="#">День строителя</a></li>
+                    <li><a href="#">День работников культуры</a></li>
+                    <li><a href="#">День бухгалтера</a></li>
+                    <li><a href="#">День космонавтики</a></li>
+                    <li><a href="#">День нефтяника и газовика</a></li>
+                    <li><a href="#">День полиции</a></li>
+                </ul>
+                <button class="btn stroke-btn">Посмотреть всё</button>
+            </div>
+        </li>
+        <li class="menu__item"><a href="" class="menu__link">Бизнес сувениры</a></li>
+    </ul>
+</nav>
+            
+<!--search-->
+<div class="search">
+    <form class="form search-form">
+        <input type="text" placeholder="Найти">
+        <button type="submit"><svg><use xlink:href="img/icons/sprite.svg#search"></use></svg></button>
+    </form>
+    <div class="search-results"></div>
+</div>
+            <div class="icon-menu"  aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="mob-header">
+        <div class="mob-header__top">
+            <div class="container header__container">
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo.svg" alt="Логотип «Дакар»">
+                    <div class="h6">Работаем <span>по всей России</span></div>
+                </a>
+                <div class="icon-menu" aria-label="Закрыть меню"></div>
+            </div>
+        </div>
+        <div class="mob-header__body"> 
+            <div class="container header__container">
+                <div class="header__info">
+                    <a href="tel:880080008080" class="header__phone">8 800 8000 80 80</a>
+                    <button class="btn stroke-btn modal-show" data-modal="feedback-modal">Оставить заявку</button>
+                </div>
+                
+<!--search-->
+<div class="search">
+    <form class="form search-form">
+        <input type="text" placeholder="Найти">
+        <button type="submit"><svg><use xlink:href="img/icons/sprite.svg#search"></use></svg></button>
+    </form>
+    <div class="search-results"></div>
+</div>
+                <!--menu-->
+<nav class="menu">
+    <ul class="menu__list">
+        <li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Наградная продукция</a></li>
+        <li class="menu__item">
+            <a href="" class="menu__link">Повод</a>
+            <div class="menu__subnavs fixed-block">
+                <ul class="container custom-scroll">
+                    <li><a href="#">8 марта</a></li>
+                    <li><a href="#">Новый год</a></li>
+                    <li><a href="#">На 23 февраля</a></li>
+                    <li><a href="#">День металлурга</a></li>
+                    <li><a href="#">День железнодорожника</a></li>
+                    <li><a href="#">День авиации</a></li>
+                    <li><a href="#">День шахтера</a></li>
+                    <li><a href="#">День геолога</a></li>
+                    <li><a href="#">День работников торговли</a></li>
+                    <li><a href="#">День гибдд</a></li>
+                    <li><a href="#">День таможенника</a></li>
+                    <li><a href="#">День медика</a></li>
+                    <li><a href="#">День страхового агента</a></li>
+                    <li><a href="#">День химика</a></li>
+                    <li><a href="#">День подбеды</a></li>
+                    <li><a href="#">День строителя</a></li>
+                    <li><a href="#">День работников культуры</a></li>
+                    <li><a href="#">День бухгалтера</a></li>
+                    <li><a href="#">День космонавтики</a></li>
+                    <li><a href="#">День нефтяника и газовика</a></li>
+                    <li><a href="#">День полиции</a></li>
+                </ul>
+                <button class="btn stroke-btn">Посмотреть всё</button>
+            </div>
+        </li>
+        <li class="menu__item"><a href="" class="menu__link">Бизнес сувениры</a></li>
+    </ul>
+</nav>
+                <div class="header__menu">
+                    <ul>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Наши работы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <!--main-->  
+        <main class="main">
+            <!--breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li>Повод</li>
+        </ul>
+    </div>
+</div>
+            <!--events-->
+            <section class="section events">
+                <div class="container">
+                    <h1 class="mb-60">Повод</h1>
+                    <div class="events__items">
+                        <a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#8march"></use></svg>
+    <h4>8 марта</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#new-year"></use></svg>
+    <h4>Новый год</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#23feb"></use></svg>
+    <h4>На 23 февраля</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#8march"></use></svg>
+    <h4>День металлурга</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#railway"></use></svg>
+    <h4>День железнодорожника</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#avia"></use></svg>
+    <h4>День авиации</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#miner"></use></svg>
+    <h4>День шахтера</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#geology"></use></svg>
+    <h4>День Геолога</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#trade"></use></svg>
+    <h4>День работников торговли</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#medicine"></use></svg>
+    <h4>День медика</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#chemistry"></use></svg>
+    <h4>День химика</h4>
+</a><a href="#" class="item-event">
+    <svg><use xlink:href="img/icons/sprite.svg#8march"></use></svg>
+    <h4>8 марта</h4>
+</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        <footer class="footer">
+    <div class="container">
+        <a href="index.html" class="footer__logo">
+            <img src="img/logo-white.svg" alt="Логотип «Дакар»">
+           <span>Работаем<br>по всей России</span> 
+        </a>    
+        <nav class="footer__menu">
+            <div class="footer__menu--col">
+                <span>Наша продукция</span>
+                <ul>
+                    <li><a class="link" href="#">Каталог</a></li>
+                    <li><a class="link" href="#">Наградная продукция</a></li>
+                    <li><a class="link" href="#">Повод</a></li>
+                    <li><a class="link" href="#">Бизнес сувениры</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu--col">
+                <span>О компании</span>
+                <ul>
+                    <li><a class="link" href="#">О нас</a></li>
+                    <li><a class="link" href="#">Услуги</a></li>
+                    <li><a class="link" href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu--col">
+                <span>Пользователям</span>
+                <ul>
+                    <li><a class="link" href="#">Наши работы</a></li>
+                    <li><a class="link" href="#">Доставка</a></li>
+                    <li><a class="link" href="#">Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer__contacts">
+            <div class="footer__contact">
+                <svg><use xlink:href="img/icons/sprite.svg#address"></use></svg>
+                <span>г Москва, Улица дом 6</span>
+            </div>
+            <a href="mailto:pochtaemail.com" class="footer__contact">
+                <svg><use xlink:href="img/icons/sprite.svg#mail"></use></svg>
+                <span>pochtaemail.com</span>
+            </a>
+            <a href="tel:84567987526" class="footer__contact">
+                <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>
+                <span>8 456 798 75 26</span>
+            </a>
+        </div>
+        <div class="footer__footer">
+            <div class="social">
+                <a href="#"><svg><use xlink:href="img/icons/sprite.svg#telegram"></use></svg></a>
+                <a href="#"><svg><use xlink:href="img/icons/sprite.svg#vk"></use></svg></a>
+                <a href="#"><svg><use xlink:href="img/icons/sprite.svg#y-dzen"></use></svg></a>
+            </div>
+            <div class="footer__content">
+                <p>© 2023 Dakar</p>
+                <a href="#" target="_blank">Пользовательское соглашение</a>
+                <a href="#" target="_blank">Политика конфиденциальности</a>
+                <div class="footer__dev">
+                    <span>Разработка</span>
+                    <noindex>
+                        <a href="https://omniagency.ru/" rel="nofollow" target="_blank">
+                            <svg><use xlink:href="img/icons/sprite.svg#omni"></use></svg>
+                        </a>
+                    </noindex>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!--overlay-->
+<div class="overlay"></div>
+<!--feedback-modal-->
+<div class="modal" id="feedback-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="btn modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <div class="h2">Оставьте заявку</div>
+            <div class="h4">и мы с вами свяжемся</div>
+            <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                <div class="form__grid">
+                    <div class="item-form error">
+                        <input type="text" placeholder="Имя" name="name">
+                        <span data-error="" class="item-form__error">Заполните имя</span>
+                    </div>
+                    <div class="item-form">
+                        <input type="tel" placeholder="Телефон" name="tel">
+                        <span data-error="" class="item-form__error"></span>
+                    </div>
+                </div>
+                <div class="item-form">
+                    <input type="text" placeholder="Почта" name="email">
+                    <span data-error="" class="item-form__error"></span>
+                </div>
+                <div class="item-form">
+                    <textarea placeholder="Ваш комментарий" name="message" maxlength="3000" oninput="this.style.height = this.scrollHeight + 'px'"></textarea>
+                </div>
+                <div class="item-form file-form">
+                    <label>
+                        <span>Прикрепить файл</span>
+                        <input type="file" name="file" accept=".png,.jpg,.jpeg,.doc,.docx,.pdf,.xls,.xlsx">
+                        <span>Нажмите или перетащите сюда файл</span>
+                    </label>
+                    <span data-error="" class="item-form__error"></span>
+                    <div class="file-form__items"></div>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn main-btn">Оставить заявку</button>
+                    <p class="form__txt">Нажимая на кнопку «Оставить заявку», вы соглашаетесь <a href="#" target="_blank">с условиями политики конфиденциальности</a> и <a href="#" target="_blank">публичной офертой</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--success-modal-->
+<div class="modal success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="btn modal__close" aria-label="Закрыть всплывающее окно">
+                <svg><use xlink:href="img/icons/sprite.svg#icon-close"></use></svg>
+            </button>
+            <picture><source srcset="img/success-bg.webp" type="image/webp"><img src="img/success-bg.png" alt="Заявка отправлена"></picture>
+            <div class="h2">Спасибо!<br>Заявка отправлена</div>
+            <div class="h4">Мы скоро с вами свяжемся</div>
+        </div>
+    </div>
+</div>
+<!--error-modal-->
+<div class="modal error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="btn modal__close" aria-label="Закрыть всплывающее окно">
+                <svg><use xlink:href="img/icons/sprite.svg#icon-close"></use></svg>
+            </button>
+            <picture><source srcset="img/error-bg.webp" type="image/webp"><img src="img/error-bg.png" alt="Заявка не отправилась"></picture>
+            <div class="h2">Упс!<br>Заявка не отправилась</div>
+            <div class="h4">Попробуйте снова</div>
+        </div>
+    </div>
+</div>
+    </div>
+    <script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

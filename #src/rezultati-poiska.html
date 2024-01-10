@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "Главная"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+            <div class="desktop-header">
+                <div class="container header__container">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/logo.svg" alt="Логотип «Дакар»">
+                        <div class="h6">Работаем <span>по всей России</span></div>
+                    </a>
+                    <div class="header__top">
+                        <div class="header__menu">
+                            <ul>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Наши работы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="header__info">
+                            <a href="tel:880080008080" class="header__phone">8 800 8000 80 80</a>
+                            <button class="btn stroke-btn modal-show" data-modal="feedback-modal">Оставить заявку</button>
+                        </div>
+                    </div>
+                    @@include("_menu.html")
+                    @@include("_search-2.html")
+                    <div class="icon-menu"  aria-label="Открыть меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mob-header">
+                <div class="mob-header__top">
+                    <div class="container header__container">
+                        <a href="index.html" class="header__logo">
+                            <img src="img/logo.svg" alt="Логотип «Дакар»">
+                            <div class="h6">Работаем <span>по всей России</span></div>
+                        </a>
+                        <div class="icon-menu" aria-label="Закрыть меню"></div>
+                    </div>
+                </div>
+                <div class="mob-header__body"> 
+                    <div class="container header__container">
+                        <div class="header__info">
+                            <a href="tel:880080008080" class="header__phone">8 800 8000 80 80</a>
+                            <button class="btn stroke-btn modal-show" data-modal="feedback-modal">Оставить заявку</button>
+                        </div>
+                        @@include("_search-2.html")
+                        @@include("_menu.html")
+                        <div class="header__menu">
+                            <ul>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Наши работы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

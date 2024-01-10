@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {
+"title": "Полное оформление офиса со скидкой 15%"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            @@include('_breadcrumbs-2.html', {
+            "page1": "Акции",
+            "page2": "Полное оформление офиса со скидкой 15%"
+            })
+            <!--promo-page-->
+            <section class="section promo-page">
+                <div class="container">
+                    <img class="mb-60" src="img/promo.jpg" alt="Полное оформление офиса со скидкой 15%">
+                    <div class="page-row">
+                        <div class="page-content">
+                            <h1>Полное оформление офиса со скидкой 15%</h1>
+                            <p>А ещё ключевые особенности структуры проекта смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. В целом,
+                                конечно, новая модель организационной деятельности не даёт нам иного выбора, кроме
+                                определения анализа существующих паттернов поведения. <b>Следует отметить, что
+                                    социально-экономическое развитие является качественно новой ступенью укрепления
+                                    моральных ценностей.</b></p>
+                        </div>
+                        <aside class="page-aside">
+                            <div class="page-sticky">
+                                <button class="btn main-btn modal-show" data-modal="#feedback-modal">Оставить
+                                    заявку</button>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+            <!--promo-cards-->
+            <section class="section promo-cards">
+                <div class="container">
+                    <h2 class="mb-60">Товары участвующие в акции</h2>
+                    <!--block-->
+                    <div class="promo-cards__swiper">
+                        <div class="swiper swiper-grid-4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    @@include("_card.html", {})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_card.html", {})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_card.html", {})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_card.html", {})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_card.html", {})
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include("_card.html", {})
+                                </div>
+                            </div>
+                        </div>
+                        @@include("_swiper-btns.html", {})
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

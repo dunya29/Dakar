@@ -1,0 +1,208 @@
+.intro {
+    padding: 48px 0;
+    background: url(../img/hero-bg.jpg) center/cover no-repeat,rgba(0, 53, 156, 0.15);
+    margin-top: 18px;
+    .container {
+        position: relative;
+    }
+    .swiper {
+        position: relative;
+    }
+    .swiper-slide {
+        padding: 45px 28px;
+        display: grid;
+        grid-template-columns: 1fr 44.04%;
+        gap: 24px;
+        align-items: center;
+    }
+    .swiper-pagination {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        z-index: 2;
+    }
+    .swiper-slide-active {
+        .intro__content {
+            h2, p, .btn {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+	&__content {
+        padding-left: 32px;
+        min-height: 344px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h2, p, .btn {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        h2 {
+            transition: transform 1s .3s, opacity 1s .45s;
+        }
+        p {
+            transition: transform 1s .25s, opacity .5s .35s;
+        }
+        .btn {
+            transition: .3s, transform 1s .2s, opacity .5s .2s;
+        }
+    }
+	&__btns {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: calc(50% - 30px);
+        left: 20px;
+        right: 20px;
+    }
+    @media (max-width: $bp2) {
+        margin-top: 0;
+        .swiper-slide {
+            padding: 38px 28px 38px 38px;
+            gap: 16px;
+        }
+        .swiper-pagination {
+            right: 16px;
+            bottom: 16px;
+        }
+        &__content {
+            min-height: 320px;
+            padding-left: 0;
+            h2, p, .btn {
+                transform: translateY(20px);
+            }
+        }
+        &__btns {
+            display: none;
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 38px 0;
+        .swiper-slide {
+            grid-template-columns: 1fr;
+            padding: 28px 28px 60px;
+        }
+        .swiper-pagination {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        &__content {
+            min-height: 0;
+            grid-row: 2/3;
+        }
+    }
+    @media (max-width: $bp6) {
+        padding: 20px 0;
+        .swiper-slide {
+            grid-template-columns: 1fr;
+            padding: 24px 16px 58px;
+        }
+    }
+}
+.intro .swiper, .main-feedback__inner {
+    max-width: 1164px;
+    margin: 0 auto;
+    border-radius: 32px;
+    h2 {
+        margin-bottom: 24px;
+    }
+    p {
+        max-width: 544px;
+        margin-bottom: 24px;
+    }
+    .main-btn {
+        width: 100%;
+        max-width: 350px;
+        margin-top: auto;
+    }
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+    @media (max-width: $bp2) {
+        h2, p {
+            margin-bottom: 16px;
+        }
+    }
+    @media (max-width: $bp3) {
+        .main-btn {
+            max-width: 270px;
+        }
+    }
+    @media (max-width: $bp4) {
+        border-radius: 24px;
+        p {
+            margin-bottom: 24px;
+        }
+        img {
+            max-height: 250px;
+        }
+    }
+    @media (max-width: $bp6) {
+        border-radius: 16px;
+        h2 {
+            margin-bottom: 12px;
+        }
+        .main-btn {
+            max-width: none;
+        }
+        img {
+            max-height: 200px;
+        }
+    }
+    
+}
+.main-feedback {
+    padding: 60px 0;
+    background: url(../img/main-feedback-bg.jpg) center/cover no-repeat;
+	&__inner {
+        background: $white;
+        display: grid;
+        grid-template-columns: 1fr 54.46%;
+        gap: 24px;
+    }
+    &__content {
+        min-height: 420px;
+        padding: 60px 0 60px 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: $bp2) {
+        padding: 48px 0;
+        &__inner {
+            gap: 16px;
+            align-items: center;
+        }
+        &__content {
+            min-height: 376px;
+            padding: 38px 0 38px 38px;
+        }
+    }
+    @media (max-width: $bp3) {
+        &__inner {
+            grid-template-columns: 1fr 40%;
+        }
+        &__content {
+            min-height: 340px;
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 38px 0;
+        &__inner {
+            grid-template-columns: 1fr;
+            padding: 28px;
+        }
+        &__content {
+            grid-row: 2/3;
+            min-height: 0;
+            padding: 0;
+        }
+    }
+    @media (max-width: $bp6) {
+        &__inner {
+            padding: 24px 16px;
+        }
+    }
+}

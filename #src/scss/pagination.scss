@@ -1,0 +1,54 @@
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 97px;
+    &:before {
+        content: "Страница:";
+        color: $dark-blue;
+        margin-right: 14px;
+      }
+    a, span {
+        font-weight: 700;
+        color: $dark-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8px;
+    }
+    a {
+        line-height: 1;
+        min-width: 45px;
+        min-height: 45px;
+        padding: 4px;
+        border-radius: 22.5px;
+        border: 1px solid $powder-blue;
+        &.current {
+            color: #fff;
+            background: $base-blue;
+            border-color: $base-blue;
+            pointer-events: none;
+        }
+    }
+    @media (max-width: $bp2) {
+        margin-top: 60px;
+    }
+    @media (max-width: $bp4) {
+        margin-top: 48px;
+        &:before {
+          content: none;
+        }
+        a, span {
+          margin: 4px;
+        } 
+        a {
+            min-width: 34px;
+            min-height: 34px;
+            border-radius: 17px;
+        }
+    }
+    @media (max-width: $bp7) {
+        margin-top: 32px;
+    }
+}

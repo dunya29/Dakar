@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {   
+    "title": "О нас"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "О нас"
+            })
+            <!--about-->
+            <section class="section about">
+                <div class="container">
+                    <div class="mb-60 about__top">
+                        <div class="about__content">
+                            <h1>О нас</h1>
+                            <p>Компания «Дакар» предлагает продукцию каталога BRIGHT AWARDS, который является профессиональным источником корпоративной наградной атрибутики, регулярно обновляющимся новейшими идеями</p>
+                        </div>
+                        <div class="about__img">
+                            <img src="img/main-about.png" alt="">
+                        </div>
+                    </div>
+                    <div class="about__cols">
+                        @@include('_col-about.html',{"nmb" : 1})
+                        @@include('_col-about.html',{"nmb" : 2})
+                    </div>
+                </div>
+            </section>
+            @@include('_why.html')
+            @@include('_main-form.html')
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>
