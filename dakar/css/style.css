@@ -1872,12 +1872,22 @@ h6,
 
 .footer__contacts {
   grid-column: 1/6;
-}
-
-.footer__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.footer__contact {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -3047,7 +3057,7 @@ h6,
 
 .item-contact a,
 .item-contact span {
-  display: block;
+  display: inline-block;
   color: #00359C;
   font-weight: 700;
 }
