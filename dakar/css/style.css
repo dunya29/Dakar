@@ -3057,9 +3057,13 @@ h6,
 
 .item-contact a,
 .item-contact span {
-  display: inline-block;
+  display: block;
   color: #00359C;
   font-weight: 700;
+}
+
+.item-contact a {
+  display: inline-block;
 }
 
 .contacts .map {

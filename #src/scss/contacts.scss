@@ -11,9 +11,12 @@
       }
     }
     a, span {
-      display: inline-block;
+      display: block;
       color: $dark-blue;
       font-weight: 700;
+    }
+    a {
+        display: inline-block;
     }
 }
 .contacts {
