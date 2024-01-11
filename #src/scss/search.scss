@@ -19,19 +19,32 @@
     position: relative;
     input {
         font-size: 18px;
-        padding: 8px 58px 8px 22px;
+        padding: 8px 58px 8px 22px!important;
         @media (max-width: $bp1) {
             font-size: 16px;
-          }
+        }
+        @media (max-width: $bp2) {
+            padding: 8px 50px 8px 16px!important;
+        }
+        @media (max-width: $bp4) {
+            padding: 8px 44px 8px 12px!important;
+        }
     }
     button {
         position: absolute;
         right: 24px;
-        top: calc(50% - 12px);
+        top: calc(50% - 13px);
         svg {
             fill: $dark-blue;
             width: 24px;
             height: 24px;
+        }
+        @media (max-width: $bp2) {
+            right: 16px;
+        }
+        @media (max-width: $bp4) {
+            top: calc(50% - 14px);
+            right: 12px;
         }
     }
 }

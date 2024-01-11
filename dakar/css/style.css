@@ -1255,13 +1255,13 @@ h6,
 
 .search-form input {
   font-size: 18px;
-  padding: 8px 58px 8px 22px;
+  padding: 8px 58px 8px 22px !important;
 }
 
 .search-form button {
   position: absolute;
   right: 24px;
-  top: calc(50% - 12px);
+  top: calc(50% - 13px);
 }
 
 .search-form button svg {
@@ -3612,6 +3612,14 @@ h6,
     position: static;
   }
 
+  .search-form input {
+    padding: 8px 50px 8px 16px !important;
+  }
+
+  .search-form button {
+    right: 16px;
+  }
+
   .header {
     padding: 12px 0;
   }
@@ -4621,6 +4629,15 @@ h6,
 
   .map {
     border-radius: 16px;
+  }
+
+  .search-form input {
+    padding: 8px 44px 8px 12px !important;
+  }
+
+  .search-form button {
+    top: calc(50% - 14px);
+    right: 12px;
   }
 
   .search-results__items {
