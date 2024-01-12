@@ -975,3 +975,25 @@ h6, .h6 {
     border-radius: 16px;
   }
 }
+@keyframes border-link {
+  0% {
+    right: 0;
+    left: auto;
+    width: 100%;
+}
+50% {
+    right: 0;
+    left: auto;
+    width: 0;
+}
+50.1% {
+    left: 0;
+    right: auto;
+    width: 0;
+}
+100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+}

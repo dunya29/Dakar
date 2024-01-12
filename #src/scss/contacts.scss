@@ -17,6 +17,9 @@
     }
     a {
         display: inline-block;
+        &:hover {
+            color: $base-blue;
+        }
     }
 }
 .contacts {

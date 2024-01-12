@@ -69,6 +69,9 @@
         font-weight: 700;
         color: $dark-blue;
         margin: 0 30px;
+        &:hover {
+            color: $base-blue;
+        }
     }
     @media (max-width: $bp1) {
         .stroke-btn {

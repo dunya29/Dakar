@@ -63,6 +63,12 @@
         display: inline-flex;
         align-items: center;
         margin-bottom: 16px;
+        .link {
+            &:after {
+                bottom: -1px;
+                background: $white;
+            }
+        }
         &:last-child {
             margin-bottom: 0
         };
@@ -98,6 +104,8 @@
         p {
             font-size: 18px;
             color: $white;
+            flex: 1 1 auto;
+            margin: 16px 24px 16px 0;
             @media (max-width: $bp1) {
                 font-size: 16px;
               }
@@ -106,9 +114,8 @@
             font-size: 16px;
             color: rgba($white, 0.6);
         }
-        p, a {
-            flex: 1 1 auto;
-            margin: 16px 24px 16px 0;
+        a:hover {
+            color: $white;
         }
     }
     &__dev {
@@ -124,7 +131,6 @@
             display: block;
             flex: 0 0 98px;
             width: 98px;
-            margin: 0!important;
         }
         svg {
             width: 98px;
