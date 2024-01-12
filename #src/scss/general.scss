@@ -659,6 +659,9 @@ h6, .h6 {
         color: $dark-blue;
       }
     }
+    &:focus {
+      border-color: transparent;
+    }
   }
   input {
     padding: 10px 24px;
