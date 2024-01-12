@@ -390,43 +390,6 @@ if (intro) {
     speed: 500
   })
 }
-// catalog filter
-const catTabs = document.querySelector('.catalog .tabs')
-function allInputsAreChecked(inputs) {
-  inputs.forEach(item => {
-    item.checked = false
-    item.removeAttribute("checked")
-  })
-}
-if ( catTabs) {
-  const allInp = catTabs.querySelectorAll("label input")[0]
-  const inputs = Array.from(catTabs.querySelectorAll("label input")).slice(1)
-  if(allInp.checked) {
-    allInputsAreChecked(inputs)
-    allInp.parentNode.classList.add("disabled")
-  }
-  allInp.addEventListener("change", () => {
-    if(allInp.checked) {
-      allInputsAreChecked(inputs)
-      allInp.parentNode.classList.add("disabled")
-    }
-  })
-  inputs.forEach(item => {
-    item.addEventListener("change", () => {
-      let findCheckedInp = inputs.find(item => item.checked)
-      if (findCheckedInp) {
-        allInp.checked = false
-        allInp.removeAttribute("checked")
-        allInp.parentNode.classList.remove("disabled")
-      } else {
-        allInp.checked = true
-        item.setAttribute("checked","")
-        allInputsAreChecked(inputs)
-        allInp.parentNode.classList.add("disabled")
-      }
-    })
-  })
-}
 // accordion slidedown/slideup
 const accHeader = document.querySelectorAll(".accordion__header")
 const accBody = document.querySelectorAll(".accordion__body")

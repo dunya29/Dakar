@@ -1129,19 +1129,6 @@ h6,
   margin: -8px;
 }
 
-.tabs label.disabled {
-  pointer-events: none;
-}
-
-.tabs label input {
-  display: none;
-}
-
-.tabs label input:checked + span {
-  color: #00359C;
-  border-color: #00359C;
-}
-
 .tabs a,
 .tabs span {
   font-weight: 700;
@@ -1166,6 +1153,7 @@ h6,
 .tabs span.active {
   color: #00359C;
   border-color: #00359C;
+  pointer-events: none;
 }
 
 .switch-block [data-block] {
@@ -5119,6 +5107,38 @@ h6,
   }
 }
 
+@media (max-width: 640px) {
+  .tabs {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  .tabs a,
+  .tabs span {
+    white-space: nowrap;
+  }
+
+  .tabs a:first-child,
+  .tabs span:first-child {
+    margin-left: 20px;
+  }
+
+  .tabs a:last-child,
+  .tabs span:last-child {
+    margin-right: 20px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .page-sort {
     -webkit-box-orient: vertical;
@@ -5154,44 +5174,6 @@ h6,
 
   .main-form .form__footer {
     text-align: center;
-  }
-
-  .awards .tabs,
-  .service .tabs {
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow: auto;
-    margin-left: -20px;
-    margin-right: -20px;
-    scrollbar-width: none;
-  }
-
-  .awards .tabs::-webkit-scrollbar,
-  .service .tabs::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
-  }
-
-  .awards .tabs a,
-  .awards .tabs span,
-  .service .tabs a,
-  .service .tabs span {
-    white-space: nowrap;
-  }
-
-  .awards .tabs a:first-child,
-  .awards .tabs span:first-child,
-  .service .tabs a:first-child,
-  .service .tabs span:first-child {
-    margin-left: 20px;
-  }
-
-  .awards .tabs a:last-child,
-  .awards .tabs span:last-child,
-  .service .tabs a:last-child,
-  .service .tabs span:last-child {
-    margin-right: 20px;
   }
 
   .menu__subnavs ul a {
@@ -5255,23 +5237,18 @@ h6,
     margin-left: 16px;
   }
 
-  .awards .tabs,
-  .service .tabs {
+  .tabs {
     margin-left: -10px;
     margin-right: -10px;
   }
 
-  .awards .tabs a:first-child,
-  .awards .tabs span:first-child,
-  .service .tabs a:first-child,
-  .service .tabs span:first-child {
+  .tabs a:first-child,
+  .tabs span:first-child {
     margin-left: 10px;
   }
 
-  .awards .tabs a:last-child,
-  .awards .tabs span:last-child,
-  .service .tabs a:last-child,
-  .service .tabs span:last-child {
+  .tabs a:last-child,
+  .tabs span:last-child {
     margin-right: 10px;
   }
 

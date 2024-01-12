@@ -823,18 +823,6 @@ h6, .h6 {
   flex-wrap: wrap;
   align-items: center;
   margin: -8px;
-  label {
-    &.disabled {
-      pointer-events: none;
-    }
-    input {
-      display: none;
-      &:checked + span {
-        color: $dark-blue;
-        border-color: $dark-blue;
-      }
-    }
-  } 
   a, span {
     font-weight: 700;
     line-height: 1.4;
@@ -851,6 +839,7 @@ h6, .h6 {
     &.active {
       color: $dark-blue;
       border-color: $dark-blue;
+      pointer-events: none;
     }
   } 
   @media (max-width: $bp2) {
@@ -867,9 +856,7 @@ h6, .h6 {
       margin: 4px;
     }
   }
-}
-.awards .tabs, .service .tabs {
-  @media (max-width: $bp5) {
+  @media (max-width: 640px) {
     flex-wrap: nowrap;
     overflow: auto;
     margin-left: -20px;
