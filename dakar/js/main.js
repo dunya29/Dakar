@@ -537,118 +537,118 @@ if (document.querySelector(".works .item-work")) {
   worksSlider()
 }
 //custom fancybox
-const fancyItems = document.querySelectorAll("[data-fancy]")
-fancyItems.forEach(item => {
-  item.addEventListener("click", e => {
-    let imgSrc = []
-    let objectFit = item.getAttribute("data-fit") ? item.getAttribute("data-fit") : ""
-    let val = item.getAttribute("data-fancy")
-    let thumb = item.hasAttribute("data-thumb")
-    let txt = item.hasAttribute("data-txt")
-    fancyItems.forEach(el => {
-      if (!el.closest(".swiper-slide-duplicate") && el.getAttribute("data-fancy") === val) {
-        imgSrc.push(el.getAttribute("data-src"))
-      }
-    })
-    let initialSl = imgSrc.indexOf(item.getAttribute("data-src"))
-
-    document.querySelector(".footer").insertAdjacentHTML('afterend', `
-    <div class="fancy-modal">
-      <div class="custom-scroll fancy-modal__inner">
-        <div class="container">
-            <div class="mb-60 fancy-modal__top">
-            ${txt ? `<h4>${item.getAttribute("data-txt")}</h4>` : ""}
-              <button class="btn fancy-modal__close" aria-label="Закрыть всплывающее окно"></button>
-            </div>
-            <div class="fancy-modal__content">
-              <div class="swiper mainswiper">
-                <div class="swiper-wrapper">
-                   ${imgSrc.map(item => `<div class="swiper-slide">
-                         <div class="swiper-img ${objectFit}">
-                             <img src=${item} alt="">
-                         </div>
-                     </div>`).join("")}
+document.addEventListener("click", e => {
+  document.querySelectorAll("[data-fancy]").forEach(item => {
+    if (item.contains(e.target)) {
+        let imgSrc = []
+        let objectFit = item.getAttribute("data-fit") ? item.getAttribute("data-fit") : ""
+        let val = item.getAttribute("data-fancy")
+        let thumb = item.hasAttribute("data-thumb")
+        let txt = item.hasAttribute("data-txt")
+        document.querySelectorAll("[data-fancy]").forEach(el => {
+          if (!el.closest(".swiper-slide-duplicate") && el.getAttribute("data-fancy") === val) {
+            imgSrc.push(el.getAttribute("data-src"))
+          }
+        })
+        let initialSl = imgSrc.indexOf(item.getAttribute("data-src"))
+    
+        document.querySelector(".footer").insertAdjacentHTML('afterend', `
+        <div class="fancy-modal">
+          <div class="custom-scroll fancy-modal__inner">
+            <div class="container">
+                <div class="mb-60 fancy-modal__top">
+                ${txt ? `<h4>${item.getAttribute("data-txt")}</h4>` : ""}
+                  <button class="btn fancy-modal__close" aria-label="Закрыть всплывающее окно"></button>
                 </div>
-              </div>
-              ${thumb ? `<div class="swiper thumbswiper">
-              <div class="swiper-wrapper grid-container">
-                ${imgSrc.map(item => `<a class="swiper-slide">
-                   <div class="swiper-img cover">
-                       <img src=${item} alt="">
-                   </div>
-               </a>`).join("")}
-             </div>
-            </div>` : ""}
+                <div class="fancy-modal__content">
+                  <div class="swiper mainswiper">
+                    <div class="swiper-wrapper">
+                       ${imgSrc.map(item => `<div class="swiper-slide">
+                             <div class="swiper-img ${objectFit}">
+                                 <img src=${item} alt="">
+                             </div>
+                         </div>`).join("")}
+                    </div>
+                  </div>
+                  ${thumb ? `<div class="swiper thumbswiper">
+                  <div class="swiper-wrapper grid-container">
+                    ${imgSrc.map(item => `<a class="swiper-slide">
+                       <div class="swiper-img cover">
+                           <img src=${item} alt="">
+                       </div>
+                   </a>`).join("")}
+                 </div>
+                </div>` : ""}
+                </div>
             </div>
+          </div>
         </div>
-      </div>
-    </div>
-   `);
-    let fancyThumbSwiper = new Swiper(".fancy-modal .thumbswiper", {
-      slidesPerView: 4,
-      spaceBetween: 8,
-      direction: 'horizontal',
-      observer: true,
-      observeParents: true,
-      watchSlidesProgress: true,
-      initialSlide: initialSl,
-      grid: {
-        rows: 1,
-        fill: "column"
-      },
-      breakpoints: {
-        1260.98: {
+       `);
+        let fancyThumbSwiper = new Swiper(".fancy-modal .thumbswiper", {
           slidesPerView: 4,
-          spaceBetween: 24,
-          direction: "vertical",
-          grid: {
-            rows: 2,
-            fill: "column"
-          },
-        },
-        767.98: {
-          slidesPerView: 4,
-          spaceBetween: 16,
-          direction: "vertical",
-          grid: {
-            rows: 2,
-            fill: "column"
-          },
-        },
-        479.98: {
-          slidesPerView: 5,
-          spaceBetween: 16,
-          direction: "horizontal",
+          spaceBetween: 8,
+          direction: 'horizontal',
+          observer: true,
+          observeParents: true,
+          watchSlidesProgress: true,
+          initialSlide: initialSl,
           grid: {
             rows: 1,
             fill: "column"
           },
-        },
-      },
-    }) 
-    let fancyMainSwiper = new Swiper(".fancy-modal .mainswiper", {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      observer: true,
-      observeParents: true,
-      initialSlide: initialSl,
-      effect: "fade",
-      thumbs: {
-        swiper: thumb ? fancyThumbSwiper : null,
-      },
-      speed: 500,
-    })
-    const fancyModal = document.querySelector(".fancy-modal")
-    if (document.querySelector(".reviews") && document.querySelector(".reviews").contains(e.target)) {
-      fancyModal.classList.add("fancy-modal--reviews")
+          breakpoints: {
+            1260.98: {
+              slidesPerView: 4,
+              spaceBetween: 24,
+              direction: "vertical",
+              grid: {
+                rows: 2,
+                fill: "column"
+              },
+            },
+            767.98: {
+              slidesPerView: 4,
+              spaceBetween: 16,
+              direction: "vertical",
+              grid: {
+                rows: 2,
+                fill: "column"
+              },
+            },
+            479.98: {
+              slidesPerView: 5,
+              spaceBetween: 16,
+              direction: "horizontal",
+              grid: {
+                rows: 1,
+                fill: "column"
+              },
+            },
+          },
+        }) 
+        let fancyMainSwiper = new Swiper(".fancy-modal .mainswiper", {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          observer: true,
+          observeParents: true,
+          initialSlide: initialSl,
+          effect: "fade",
+          thumbs: {
+            swiper: thumb ? fancyThumbSwiper : null,
+          },
+          speed: 500,
+        })
+        const fancyModal = document.querySelector(".fancy-modal")
+        if (document.querySelector(".reviews") && document.querySelector(".reviews").contains(e.target)) {
+          fancyModal.classList.add("fancy-modal--reviews")
+        }
+        openModal(fancyModal)
+        fancyModal.querySelector(".fancy-modal__close").addEventListener("click", e => {
+          closeModal(fancyModal)
+          setTimeout(() => {
+            fancyModal.remove()
+          }, animSpd);
+        })
     }
-    openModal(fancyModal)
-    fancyModal.querySelector(".fancy-modal__close").addEventListener("click", e => {
-      closeModal(fancyModal)
-      setTimeout(() => {
-        fancyModal.remove()
-      }, animSpd);
-    })
   })
-
 })

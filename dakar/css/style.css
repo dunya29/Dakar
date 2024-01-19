@@ -2297,13 +2297,15 @@ h6,
   background: rgba(0, 53, 156, 0.08);
 }
 
-.item-about svg {
+.item-about img {
   stroke: #00359C;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 152px;
   flex: 0 0 152px;
   width: 152px;
   height: 152px;
+  -o-object-fit: contain;
+  object-fit: contain;
   -webkit-transform: rotate(-9.052deg) scale(1.06);
   -ms-transform: rotate(-9.052deg) scale(1.06);
   transform: rotate(-9.052deg) scale(1.06);
@@ -2370,13 +2372,14 @@ h6,
   background: rgba(0, 53, 156, 0.08);
 }
 
-.item-why svg {
-  stroke: #00359C;
+.item-why img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 140px;
   flex: 0 0 140px;
   width: 140px;
   height: 140px;
+  -o-object-fit: contain;
+  object-fit: contain;
   margin-right: 24px;
 }
 
@@ -2612,12 +2615,14 @@ h6,
   color: #00359C;
 }
 
-.item-event svg {
+.item-event img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100px;
   flex: 0 0 100px;
   width: 100px;
   height: 100px;
+  -o-object-fit: contain;
+  object-fit: contain;
   margin-right: 24px;
 }
 
@@ -4021,7 +4026,7 @@ h6,
     padding: 38px 0 38px 38px;
   }
 
-  .item-about svg {
+  .item-about img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 142px;
     flex: 0 0 142px;
@@ -4057,7 +4062,7 @@ h6,
     padding: 16px 32px;
   }
 
-  .item-why svg {
+  .item-why img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 120px;
     flex: 0 0 120px;
@@ -4108,7 +4113,7 @@ h6,
     padding: 8px 16px;
   }
 
-  .item-event svg {
+  .item-event img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 80px;
     flex: 0 0 80px;
@@ -4392,7 +4397,7 @@ h6,
     min-height: 340px;
   }
 
-  .item-about svg {
+  .item-about img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 130px;
     flex: 0 0 130px;
@@ -4422,7 +4427,7 @@ h6,
     padding: 12px 16px;
   }
 
-  .item-why svg {
+  .item-why img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100px;
     flex: 0 0 100px;
@@ -5188,7 +5193,7 @@ h6,
     overflow: visible;
   }
 
-  .item-about svg {
+  .item-about img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100px;
     flex: 0 0 100px;
@@ -5204,7 +5209,7 @@ h6,
     padding: 8px 12px;
   }
 
-  .item-why svg {
+  .item-why img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 90px;
     flex: 0 0 90px;
@@ -5397,7 +5402,7 @@ h6,
     gap: 8px;
   }
 
-  .item-event svg {
+  .item-event img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 60px;
     flex: 0 0 60px;

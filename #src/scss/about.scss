@@ -4,11 +4,12 @@
     overflow: hidden;
     border-radius: 16px;
     background: $light-blue;
-    svg {
+    img {
         stroke: $dark-blue;
         flex: 0 0 152px;
         width: 152px;
         height: 152px;
+        object-fit: contain;
         transform: rotate(-9.052deg) scale(1.06);
         position: relative;
         left: -5px;
@@ -18,7 +19,7 @@
         padding: 24px 32px 24px 24px;
     }
     @media (max-width: $bp2) {
-        svg {
+        img {
             flex: 0 0 142px;
             width: 142px;
             height: 142.5px;
@@ -28,14 +29,14 @@
         }
     }  
     @media (max-width: $bp3) {
-        svg {
+        img {
             flex: 0 0 130px;
             width: 130px;
             height: 130px;
         }
     }
     @media (max-width: $bp5) {
-        svg {
+        img {
             flex: 0 0 100px;
             width: 100px;
             height: 100px;
@@ -136,16 +137,16 @@
     align-items: center;
     border-radius: 16px;
     background: $light-blue;
-    svg {
-        stroke: $dark-blue;
+    img {
         flex: 0 0 140px;
         width: 140px;
         height: 140px;
+        object-fit: contain;
         margin-right: 24px;
     }
     @media (max-width: $bp2) {
         padding: 16px 32px;
-        svg {
+        img {
             flex: 0 0 120px;
             width: 120px;
             height: 120px;
@@ -154,7 +155,7 @@
     }
     @media (max-width: $bp3) {
         padding: 12px 16px;
-        svg {
+        img {
             flex: 0 0 100px;
             width: 100px;
             height: 100px;
@@ -162,7 +163,7 @@
     }
     @media (max-width: $bp5) {
         padding: 8px 12px;
-        svg {
+        img {
             flex: 0 0 90px;
             width: 90px;
             height: 90px;
